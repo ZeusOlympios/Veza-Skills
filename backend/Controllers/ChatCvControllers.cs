@@ -62,9 +62,11 @@ public class ChatController : ApiBase
 
         string raw;
         try { raw = await _claude.AskAsync(system, turns, 900); }
-        catch (Exception ex) when (ex is InvalidOperationException or HttpRequestException or TaskCanceledException)
+            catch (Exception ex) when (ex is InvalidOperationException or HttpRequestException or TaskCanceledException)
         {
-            return Err(502, "ai_unavailable", "The assistant is not available right now. Please try again.");
+            // Demo mode: Claude unavailable, use the template fallback
+            var allUserText = string.Join(" ", turns.Where(t => t.role == "user").Select(t => t.content));
+            raw = DemoFallback.ChatJson(msg, allUserText, skills.Select(s => s.Name), history.Count(h => h.Role == "user"));
         }
 
         var reply = raw.Trim();
@@ -210,9 +212,10 @@ public class CvController : ApiBase
 
         JsonElement root;
         try { root = await _claude.AskJsonAsync(system, new[] { ("user", sb.ToString()) }, 1500); }
-        catch (Exception ex) when (ex is InvalidOperationException or HttpRequestException or TaskCanceledException or JsonException)
+            catch (Exception ex) when (ex is InvalidOperationException or HttpRequestException or TaskCanceledException or JsonException)
         {
-            return Err(502, "ai_unavailable", "The assistant is not available right now. Please try again.");
+            // Demo mode: Claude unavailable, build a template CV from the user's own evidence
+            root = DemoFallback.CvJson(pskills.Select(p => (p.Skill?.Name ?? "", p.EvidenceText ?? "")));
         }
 
         if (root.TryGetProperty("headline", out var h) && h.ValueKind == JsonValueKind.String)
