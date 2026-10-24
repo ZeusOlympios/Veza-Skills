@@ -1,0 +1,32 @@
+role_title,skill_name,weight
+Retail Sales Assistant,Customer service,3
+Retail Sales Assistant,Communication,2
+Retail Sales Assistant,Teamwork,2
+Retail Sales Assistant,Cash handling,1
+Cashier,Cash handling,3
+Cashier,Customer service,2
+Cashier,Time management,1
+Call Centre Agent,Customer service,3
+Call Centre Agent,Communication,3
+Call Centre Agent,Basic computer skills,2
+Call Centre Agent,Problem solving,2
+Admin Clerk,Basic computer skills,3
+Admin Clerk,Time management,2
+Admin Clerk,Communication,2
+Admin Clerk,Spreadsheet basics,2
+Data Capturer,Basic computer skills,3
+Data Capturer,Spreadsheet basics,3
+Data Capturer,Time management,2
+Teaching Assistant,Communication,3
+Teaching Assistant,Teamwork,2
+Teaching Assistant,Leadership,1
+Teaching Assistant,Problem solving,1
+Store Team Supervisor,Leadership,3
+Store Team Supervisor,Teamwork,2
+Store Team Supervisor,Customer service,2
+Store Team Supervisor,Cash handling,2
+Store Team Supervisor,Time management,2
+Junior IT Support Technician,Problem solving,3
+Junior IT Support Technician,Basic computer skills,3
+Junior IT Support Technician,Online safety,2
+Junior IT Support Technician,Communication,2

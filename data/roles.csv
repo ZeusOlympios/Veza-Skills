@@ -1,0 +1,9 @@
+title,sector,description,entry_level
+Retail Sales Assistant,Retail,"Helps customers in a shop, packs shelves and keeps the store tidy",true
+Cashier,Retail,"Scans items, takes payments and gives correct change",true
+Call Centre Agent,Customer Support,Answers customer calls and messages and solves queries,true
+Admin Clerk,Administration,"Files documents, answers emails and supports an office team",true
+Data Capturer,Administration,Types information into computer systems accurately,true
+Teaching Assistant,Education,"Supports a teacher, helps learners and prepares classroom materials",true
+Store Team Supervisor,Retail,Guides a small team on shift and keeps the store running well,false
+Junior IT Support Technician,Technology,"Helps staff with computer problems, accounts and passwords",true

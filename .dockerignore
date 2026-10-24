@@ -1,0 +1,6 @@
+frontend
+node_modules
+**/bin
+**/obj
+.git
+.env
