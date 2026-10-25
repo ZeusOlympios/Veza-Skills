@@ -1,32 +1,33 @@
 role_title,skill_name,weight
-Retail Sales Assistant,Customer service,3
-Retail Sales Assistant,Communication,2
-Retail Sales Assistant,Teamwork,2
-Retail Sales Assistant,Cash handling,1
-Cashier,Cash handling,3
-Cashier,Customer service,2
-Cashier,Time management,1
-Call Centre Agent,Customer service,3
-Call Centre Agent,Communication,3
-Call Centre Agent,Basic computer skills,2
-Call Centre Agent,Problem solving,2
-Admin Clerk,Basic computer skills,3
-Admin Clerk,Time management,2
-Admin Clerk,Communication,2
-Admin Clerk,Spreadsheet basics,2
-Data Capturer,Basic computer skills,3
-Data Capturer,Spreadsheet basics,3
-Data Capturer,Time management,2
-Teaching Assistant,Communication,3
-Teaching Assistant,Teamwork,2
-Teaching Assistant,Leadership,1
-Teaching Assistant,Problem solving,1
-Store Team Supervisor,Leadership,3
-Store Team Supervisor,Teamwork,2
-Store Team Supervisor,Customer service,2
-Store Team Supervisor,Cash handling,2
-Store Team Supervisor,Time management,2
-Junior IT Support Technician,Problem solving,3
-Junior IT Support Technician,Basic computer skills,3
-Junior IT Support Technician,Online safety,2
-Junior IT Support Technician,Communication,2
+Retail Assistant,Communication,1
+Retail Assistant,Customer Service,1
+Retail Assistant,Sales,1
+Retail Assistant,Cash Handling,1
+Call Center Agent,Communication,1
+Call Center Agent,Customer Service,1
+Call Center Agent,Problem Solving,1
+General Worker,Time Management,1
+General Worker,Problem Solving,1
+General Worker,Basic Carpentry,1
+Admin Clerk,Communication,1
+Admin Clerk,Time Management,1
+Admin Clerk,Problem Solving,1
+Data Capturer,Basic Coding,1
+Data Capturer,Time Management,1
+Data Capturer,Problem Solving,1
+Sales Representative,Communication,1
+Sales Representative,Sales,1
+Sales Representative,Customer Service,1
+Receptionist,Communication,1
+Receptionist,Customer Service,1
+Receptionist,Time Management,1
+Junior Tutor,Communication,1
+Junior Tutor,Tutoring,1
+Junior Tutor,Problem Solving,1
+Warehouse Picker,Time Management,1
+Warehouse Picker,Problem Solving,1
+Warehouse Picker,Basic Carpentry,1
+Social Media Assistant,Communication,1
+Social Media Assistant,Basic Coding,1
+Social Media Assistant,Social Media,1
+Social Media Assistant,Sales,1

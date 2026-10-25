@@ -125,9 +125,11 @@ public static class SeedData
             foreach (var r in Read(Path.Combine(dir, "quiz_questions.csv")))
             {
                 if (!skillsByName.TryGetValue(Get(r, "skill_name").ToLower(), out var skillId)) continue;
-                var options = new[] { Get(r, "option_a"), Get(r, "option_b"), Get(r, "option_c"), Get(r, "option_d") };
-                if (options.Any(o => o == "")) continue;
-                if (!int.TryParse(Get(r, "correct_index"), out var correct) || correct < 0 || correct > 3) continue;
+                // Accept 3 or 4 options (blank option_d is allowed)
+                var options = new[] { Get(r, "option_a"), Get(r, "option_b"), Get(r, "option_c"), Get(r, "option_d") }
+                    .Where(o => o != "").ToArray();
+                if (options.Length < 3) continue;
+                if (!int.TryParse(Get(r, "correct_index"), out var correct) || correct < 0 || correct >= options.Length) continue;
                 _ = int.TryParse(Get(r, "difficulty"), out var diff);
                 var lang = Get(r, "language").ToLower();
                 db.QuizQuestions.Add(new QuizQuestion
