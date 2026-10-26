@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "build": {
+    "env": {
+      "VITE_SUPABASE_URL": "https://moknnzrcmwxpcazvqhxn.supabase.co",
+      "VITE_SUPABASE_ANON_KEY": "sb_publishable_E3h7cl3-AXBQjHR0UKr8ww_a1L98bjx"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
