@@ -8,7 +8,9 @@ React + TypeScript interface for the VezaSkills API. The landing page follows `w
 2. From this folder, run `npm install` and `npm run dev`.
 3. Open the local URL Vite prints. Create an account or log in from the landing page. Access and refresh tokens are stored in the current browser session.
 
-The Supabase Auth URL configuration must allow the local development URL and deployed frontend URL as redirect URLs. The API CORS `FRONTEND_URL` setting must also allow each frontend origin. The backend’s Supabase URL and publishable/anon key must be configured in its hosting environment for token validation.
+For production, set the Vercel project root to this `frontend` folder and the output directory to `dist`. The Vercel build configuration supplies `VITE_API_URL`, `VITE_SUPABASE_URL`, and `VITE_SUPABASE_ANON_KEY`; these are browser-visible values, so never put a Supabase service-role key in the frontend.
+
+In Supabase **Authentication → URL Configuration**, set the Site URL to `https://veza-skills-main.vercel.app` and allow that URL as a redirect URL. Sign-up confirmation and password recovery return to the current VezaSkills site origin. In Render, set `FRONTEND_URL` to `https://veza-skills-main.vercel.app` (comma-separated if you also need other origins), and configure the backend's `SUPABASE_URL` and publishable/anon key for API token validation. Redeploy both services after changing environment settings.
 
 ## Local backend
 
